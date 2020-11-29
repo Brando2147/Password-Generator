@@ -1,3 +1,5 @@
+//Asignment Code 
+var generateBtn = document.querySelector("#generate");
 
 
 // Write password to the #password input
@@ -14,70 +16,63 @@ function writePassword() {
 function generatePassword() {
 
 
-  const passLength = prompt('Please choose your password length (8-128)');
-  const useSpec = confirm('Include special characters?');
-  const useLower = confirm('Include lowercase characters?');
-  const useUpper = confirm('Include uppercase characters?');
-  const useNum = confirm('Include numeric characters?');
+  let userlength = prompt('Please choose your password length (8-128)');
+  let useSpec = confirm('Include special characters?');
+  let useLower = confirm('Include lowercase characters?');
+  let useUpper = confirm('Include uppercase characters?');
+  let useNum = confirm('Include numeric characters?');
+  let generatedPassword = '';
 
 
-  function randomSpec() {
-    let spec = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-    return spec[Math.floor(Math.random() * passLength.length)];
-  }
 
-  function randomLower() {
-    let lower = 'abcdefghijklmnopqrstuvwxyz';
-    return lower[Math.floor(Math.random() * passLength.length)];
-  }
+  let specArr = ['!', '#', '$', '%', '&', '\\', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '^', '[', '', ']', '^', '_', '`', '{', '|', '}', '~']
+  let lowerArr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+  let upperArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+  let numArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
-  function randomUpper() {
-    let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    return upper[Math.floor(Math.random() * passLength.length)];
-  }
+  let availChar = [];
+  let finalChar = [];
 
-  function randomNum() {
-    let numbers = '1234567890';
-    return numbers[Math.floor(Math.random() * passLength.length)];
-  }
-
-  let charChoice = '';
+  // console.log(userlength);
+  // if (userlength <= 8) {
+  //   alert('Please choose a number 8-128');
+  // }
 
   if (useSpec) {
-    charChoice += useSpec;
+    availChar = availChar.concat(specArr);
   }
 
   if (useLower) {
-    charChoice += useLower;
+    availChar = availChar.concat(lowerArr);
   }
 
   if (useUpper) {
-    charChoice += useUpper;
+    availChar = availChar.concat(upperArr);
   }
 
   if (useNum) {
-    charChoice += useNum;
+    availChar = availChar.concat(numArr);
   }
 
 
-  let generatedPassword = '';
-  console.log('here');
 
-  for (i = 0; i <= passwordLength; i++) {
-    const index = Math.floor(Math.random() * charChoice.length);
-    generatedPassword += charChoice[index];
+  for (i = 0; i <= userlength; i++) {
+    let i = Math.floor(Math.random() * availChar.length);
+    generatedPassword += availChar[i];
 
-    generatePassword();
+
 
   }
   return generatedPassword;
 
 
+
 }
 
-// // Alert the password has been generated
+
+// Alert the password has been generated
 // alert("Your password has been generated!")
 
 
 // Add event listener to generate button
-const generateBtn = addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
