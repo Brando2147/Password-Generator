@@ -1,4 +1,4 @@
-//Asignment Code 
+//Asigning button
 var generateBtn = document.querySelector("#generate");
 
 
@@ -14,9 +14,6 @@ function writePassword() {
 
 // Function to generate password
 function generatePassword() {
-  let availChar = [];
-  let finalChar = [];
-  let generatedPassword = '';
 
 
   // Prompt user for password length
@@ -48,39 +45,53 @@ function generatePassword() {
   let numArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 
 
-  // Logic to add chosen characters from Array
+  // Adding the user characters to an array 
+  // Adding a single user character from each character array to include in the final password
+  let userChars = [];
+  let reqChar = [];
   if (useSpec) {
-    availChar = availChar.concat(specArr);
+    userChars = userChars.concat(specArr);
+    reqChar = reqChar.concat(specArr[Math.floor(Math.random() * specArr.length)])
+
   }
 
   if (useLower) {
-    availChar = availChar.concat(lowerArr);
+    userChars = userChars.concat(lowerArr);
+    reqChar = reqChar.concat(lowerArr[Math.floor(Math.random() * lowerArr.length)])
+
   }
 
   if (useUpper) {
-    availChar = availChar.concat(upperArr);
+    userChars = userChars.concat(upperArr);
+    reqChar = reqChar.concat(upperArr[Math.floor(Math.random() * upperArr.length)])
+
   }
 
   if (useNum) {
-    availChar = availChar.concat(numArr);
+    userChars = userChars.concat(numArr);
+    reqChar = reqChar.concat(numArr[Math.floor(Math.random() * numArr.length)])
+
   }
 
 
-  //Iterates the user length and chooses random characters from Arrays
+  //Iterates the user length and chooses random characters from the User characters 
+  let userPass = [];
   for (i = 0; i < userLength; i++) {
-    let i = Math.floor(Math.random() * availChar.length);
-    generatedPassword += availChar[i];
+    let passIndex = Math.floor(Math.random() * userChars.length);
+    let randomChar = userChars[passIndex]
+    userPass.push(randomChar);
   }
 
-  // Iterates through the generated password length and assigns at least one character from each array chosen
 
+  // Iterates through the final password length and places the required characters in the password
+  for (let r = 0; r < reqChar.length; r++) {
+    reqChar[r] = userPass[r + 3]
+  }
 
-  return generatedPassword;
-
+  return userPass.join("");
 
 
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
