@@ -8,7 +8,7 @@ Password security is very important. There are 3 major guidelines when creating 
 2. Never compose a password from personal information (birthday, spouse name etc.)
 3. Never use a single character type. Utilize letters, numbers and special characters.
 
-With this project I created a simple random password generator. This application allows users to pick from different character types lower case, upper case, numerical, and special characters. You can also choose the length of the password from 8 to 128 characters. 
+With this project I created a simple random password generator. This application allows users to pick from different character types lower case, upper case, numbers, and special characters. You can also choose the length of the password from 8 to 128 characters.
 
 Navigate through the user prompts to choose your password length and selecting characters which to include. 
 
