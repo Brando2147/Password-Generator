@@ -29,5 +29,7 @@ After successfully choosing a correct length and atleast one character type, the
 
 
 
+[Github] (https://brando2147.github.io/Password-Generator//) 
 
+[Repo] (https://github.com/Brando2147/Password-Generator/)
 
