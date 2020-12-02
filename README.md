@@ -2,7 +2,7 @@
 
 ## Description
 
-Password security is very important. There are 3 major guidelines when using passwords. 
+Password security is very important. There are 3 major guidelines when creating and using passwords. 
 
 1. Never reuse a password multiple times for multiple accounts. 
 2. Never compose a password from personal information (birthday, spouse name etc.)
