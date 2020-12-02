@@ -12,19 +12,19 @@ With this project I created a simple random password generator. This application
 
 Navigate through the user prompts to choose your password length and selecting characters which to include. 
 
-![passwordgenerator](https://github.com/Brando2147/Password-Generator/blob/main/assets/images/PasswordGenerator.png)
+![PasswordGenerator](https://github.com/Brando2147/Password-Generator/blob/main/Assets/images/PasswordGenerator.png)
 
 If an invalid length is selected you will be alerted. 
 
-![LengthWarning](https://github.com/Brando2147/Password-Generator/blob/main/assets/images/LengthWarning.png)
+![LengthWarning](https://github.com/Brando2147/Password-Generator/blob/main/Assets/images/LengthWarning.png)
 
 If no characters are selected you will also be alerted.
 
-![CharacterWarning](https://github.com/Brando2147/Password-Generator/blob/main/assets/images/CharacterWarning.png)
+![CharacterWarning](https://github.com/Brando2147/Password-Generator/blob/main/Assets/images/CharacterWarning.png)
 
 After successfully choosing a correct length and atleast one character type, the result is a random generated password.
 
-![GeneratedPassword](https://github.com/Brando2147/Password-Generator/blob/main/assets/images/GeneratedPassword.png)
+![GeneratedPassword](https://github.com/Brando2147/Password-Generator/blob/main/Assets/images/GeneratedPassword.png)
 
 
 
